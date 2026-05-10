@@ -76,11 +76,11 @@ export const workExperience = [
 export const projects = [
   {
     id: 1,
-    title: "AI-Powered Image Recognition",
-    description: "Real-time object detection system using deep learning for automated visual inspection in manufacturing.",
-    longDescription: "Developed a comprehensive real-time object detection system leveraging state-of-the-art deep learning architectures. The system processes visual data from manufacturing assembly lines, identifying defects and quality issues with 98% accuracy. Implemented custom CNN models using TensorFlow, integrated with OpenCV for real-time video stream processing. The Flask-based API serves predictions to multiple factory floor terminals simultaneously, handling 100K+ images daily with sub-second response times.",
-    techStack: ["Python", "TensorFlow", "OpenCV", "Flask"],
-    link: "#",
+    title: "Latuea Land – Integrated Property Marketplace & Management System",
+    description: "A dual-layered property platform bridging real estate seekers and admins with intuitive UI/UX",
+    longDescription: "Latuea Land is a comprehensive, dual-layered real estate platform designed to modernize how properties are discovered and managed. The core objective was to build an ecosystem that seamlessly serves two distinct users: prospective home buyers seeking a smooth browsing experience, and administrators requiring a robust tool to manage complex property data.",
+    techStack: ["php", "react", "MySQL", "Figma"],
+    link: "https://www.latuealand.com/",
     images: [
       "/projects/ai-recognition-1.jpg",
       "/projects/ai-recognition-2.jpg",
@@ -89,17 +89,29 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Modern E-Commerce Platform",
-    description: "Full-stack e-commerce solution with seamless checkout experience and inventory management.",
-    techStack: ["Next.js", "React", "Tailwind", "Stripe"],
-    link: "#",
+    title: "Nolta Surya Trans - Company Profile Website",
+    description: "A modern and responsive company profile website developed for Nolat to showcase their comprehensive logistics and freight forwarding services.",
+    longDescription: "Designed and developed a professional company profile landing page for Nolta Surya Trans, a logistics company. The goal of this project was to establish a strong online presence and clearly communicate their core services, such as freight forwarding, warehousing, and last-mile delivery, to potential B2B clients.\n\nThe website features a clean, corporate UI design tailored for the logistics industry, emphasizing reliability and speed. Built with modern web technologies, it ensures fast loading times, seamless responsiveness across all devices, and an intuitive user experience to drive client inquiries.",
+    techStack: ["Next.js", "Tailwind CSS", "TypeScript", "Figma"],
+    link: "https://noltalogistic.com/",
+    images: [
+      "/projects/ai-recognition-1.jpg",
+      "/projects/ai-recognition-2.jpg",
+      "/projects/ai-recognition-3.jpg"
+    ]
   },
   {
     id: 3,
-    title: "Design System Library",
-    description: "Comprehensive component library with 50+ reusable components built with accessibility in mind.",
-    techStack: ["React", "TypeScript", "Storybook", "Figma"],
+    title: "Yayasan Yuan Bhakti - Website Redesign",
+    description: "Modernized Yayasan Yuan Bhakti's digital presence by migrating from legacy HTML to a fast, SEO-optimized Next.js platform.",
+    longDescription: "The Yayasan Yuan Bhakti project involved a complete digital transformation of the foundation's official website. The primary objective was to modernize their outdated static HTML site into a highly performant, scalable, and discoverable web platform to better serve their community and expand their online reach.",
+    techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
     link: "#",
+    images: [
+      "/projects/ai-recognition-1.jpg",
+      "/projects/ai-recognition-2.jpg",
+      "/projects/ai-recognition-3.jpg"
+    ]
   },
   {
     id: 4,

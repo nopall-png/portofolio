@@ -6,7 +6,7 @@ export interface Project {
     id: string | number;
     title: string;
     description: string;
-    longDescription?: string; // Tambahkan longDescription sebagai opsional
+    longDescription?: string;
     techStack: string[];
     link: string;
     images?: string[];
@@ -67,12 +67,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </button>
 
                 {/* Kolom Kiri: Informasi Project */}
-                <div className="w-full lg:w-1/2 h-full p-8 lg:p-12 flex flex-col overflow-y-auto custom-scrollbar">
+                {/* PERBAIKAN DI SINI: Menambahkan class untuk hide scrollbar tapi tetap bisa di-scroll */}
+                <div className="w-full lg:w-1/2 h-full p-8 lg:p-12 flex flex-col overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                     <h2 className="text-neutral-50 text-3xl lg:text-4xl font-extrabold font-['Inter'] leading-tight mb-6">
                         {project.title}
                     </h2>
 
-                    {/* Gunakan longDescription di sini. Jika kosong, pakai description biasa */}
                     <p className="text-neutral-400 text-base lg:text-lg font-normal font-['Inter'] leading-relaxed mb-10 whitespace-pre-wrap">
                         {project.longDescription || project.description}
                     </p>
