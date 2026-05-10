@@ -37,7 +37,7 @@ export default function Hero() {
                 aria-label={social.name}
               >
                 <img 
-                  src={`https://cdn.simpleicons.org/${social.icon}/white`} 
+                  src={`/icons/${social.icon}.svg`} 
                   alt={social.name}
                   className="w-5 h-5 opacity-60 group-hover:opacity-100 transition-opacity"
                 />

@@ -33,7 +33,7 @@ export default function TechStack() {
                         {/* Using SimpleIcons CDN for monochrome white SVGs */}
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img 
-                          src={`https://cdn.simpleicons.org/${skill.icon}/white`} 
+                          src={`/icons/${skill.icon}.svg`} 
                           alt={skill.name}
                           className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                         />
