@@ -24,23 +24,47 @@ export default function Hero() {
           {/* Social Links */}
           <div className="flex items-center gap-6 mt-8">
             {[
-              { name: "LinkedIn", icon: "linkedin", href: "#" },
-              { name: "Instagram", icon: "instagram", href: "#" },
-              { name: "GitHub", icon: "github", href: "#" },
+              { name: "LinkedIn", href: personalData.socialLinks.linkedin },
+              { name: "Instagram", href: personalData.socialLinks.instagram },
+              { name: "GitHub", href: personalData.socialLinks.github },
             ].map((social) => (
               <a
                 key={social.name}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all group"
+                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 hover:border-white/30 transition-all group"
                 aria-label={social.name}
               >
-                <img
-                  src={`/icons/${social.icon}.svg`}
-                  alt={social.name}
-                  className="w-5 h-5 opacity-60 group-hover:opacity-100 transition-opacity"
-                />
+                <svg 
+                  width="20" 
+                  height="20" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  className="text-neutral-400 group-hover:text-white transition-colors"
+                >
+                  {social.name === "LinkedIn" && (
+                    <>
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                      <rect width="4" height="12" x="2" y="9" />
+                      <circle cx="4" cy="4" r="2" />
+                    </>
+                  )}
+                  {social.name === "GitHub" && (
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3.5 1.5a10.8 10.8 0 0 0-5.5 0C7.5 2 6.5 2 6.5 2c-.28 1.15-.28 2.35 0 3.5a4.6 4.6 0 0 0-1 3.5c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  )}
+                  {social.name === "Instagram" && (
+                    <>
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </>
+                  )}
+                </svg>
               </a>
             ))}
           </div>

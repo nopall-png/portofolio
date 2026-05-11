@@ -4,6 +4,11 @@ export const personalData = {
   description: "Dedicated to mastering the complexities of Artificial Intelligence. I focus on designing and implementing Machine Learning and Deep Learning models, with a strong emphasis on Computer Vision to solve real-world visual recognition challenges.",
   email: "naufalrizki519@gmail.com",
   profileImage: "/images/profile.jpg",
+  socialLinks: {
+    github: "https://github.com/nopall-png",
+    linkedin: "https://www.linkedin.com/in/naufal-rizki-pinugroho/",
+    instagram: "https://www.instagram.com/_naufalrzki?igsh=bDNvaXY1Zm1zMWg1"
+  }
 };
 
 export const aboutMe = {
@@ -95,6 +100,7 @@ export const projects = [
       "/project/project1/latua2.png",
       "/project/project1/latua3.png",
     ],
+    github: "https://github.com/nopall-png/Latua-Group",
     coverImage: "/project/project1/latua.png"
   },
   {
@@ -109,6 +115,7 @@ export const projects = [
       "/project/project2/nolta2.png",
       "/project/project2/nolta3.png",
     ],
+    github: "https://github.com/nopall-png/nolta-company-profile",
     coverImage: "/project/project2/nolta1.png"
   },
   {
@@ -123,7 +130,8 @@ export const projects = [
       "/project/project3/yayasan2.png",
       "/project/project3/yayasan3.png"
     ],
-    coverImage: "/project/project3/yayasan.png"
+    coverImage: "/project/project3/yayasan.png",
+    github: "https://github.com/nopall-png/yayasanyuanabhakti",
   },
   {
     id: 4,
@@ -138,14 +146,15 @@ export const projects = [
       "/project/project4/might4.png"
     ],
     documentation: "/documentation/MEET.pdf",
-    coverImage: "/project/project4/might.png"
+    coverImage: "/project/project4/might.png",
+    github: "https://github.com/nopall-png/might",
   },
   {
     id: 5,
     title: "Level up! - E-Learning Platform",
     description: "An intelligent e-learning platform featuring AI-driven personalized feedback. Built with Next.js.",
     longDescription: "Level Up is an AI-powered e-learning ecosystem designed to transform the traditional online learning experience into a personalized mentorship journey. Beyond just delivering content, the platform acts as an intelligent tutor that understands student performance and provides actionable insights.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Figma", "LLM Integration"],
+    techStack: ["Mobile", "Next.js", "TypeScript", "Tailwind CSS", "Figma", "LLM Integration"],
     link: "https://e-learning-softeng-project.vercel.app/",
     images: [
       "/project/project5/level1.mp4",
@@ -153,18 +162,19 @@ export const projects = [
       "/project/project5/level3.png"
     ],
     documentation: "/documentation/software engineering.pdf",
-    coverImage: "/project/project5/cover.png"
+    coverImage: "/project/project5/cover.png",
+    github: "https://github.com/nopall-png/e-learning",
   },
   {
     id: 6,
     title: "Smart Sorting Conveyer - IoT & CV",
     description: "VisionSort is an automated, intelligent industrial sorting system that bridges the gap between Artificial Intelligence and physical hardware. The project was designed to streamline logistics and packaging workflows by dynamically routing moving objects based on visual cues, entirely eliminating the need for manual sorting.",
     techStack: ["Python", "OpenCV", "YOLO", "Roboflow", "Arduino", "IoT Protocols"],
-    link: "https://github.com/KuroBapak/Robot-Sorting-Conveyor",
+    github: "https://github.com/KuroBapak/Robot-Sorting-Conveyor",
     images: [
-      "/project/ai-recognition-1.jpg",
-      "/project/ai-recognition-2.jpg",
-      "/project/ai-recognition-3.jpg"
+      "/project/project6/conveyer4.mp4",
+      "/project/project6/conveyer2.png",
+      "/project/project6/conveyer3.png"
     ],
     documentation: "/documentation/Group1_JACOST.pdf",
     coverImage: "/project/project6/cover.png"
@@ -175,7 +185,7 @@ export const projects = [
     description: "Interactive dashboard for monitoring machine learning model performance and data drift detection.",
     longDescription: "Roadmap AI is an intelligent e-learning ecosystem designed to transform the traditional online learning experience into a personalized mentorship journey. Beyond just delivering content, the platform acts as an intelligent tutor that understands student performance and provides actionable insights.",
     techStack: ["Next.js", "Typescript", "pyhton", "figma",],
-    link: "https://github.com/nopall-png/Roadmap-ai",
+    github: "https://github.com/nopall-png/Roadmap-ai",
     images: [
       "/project/project7/roadmap1.mp4",
       "/project/project7/roadmap2.png",
@@ -190,14 +200,13 @@ export const projects = [
     description: "An intelligent waste management system utilizing YOLOv8 for real-time garbage detection and automated classification to streamline recycling processes.",
     longDescription: "SmartSort AI is an advanced waste management solution designed to automate and optimize the garbage sorting process. The project addresses the global challenge of inefficient recycling by introducing an intelligent system capable of identifying and classifying different types of waste in real-time as they move along a conveyor belt or are scanned.",
     techStack: ["Python", "YOLOv8", "Roboflow", "OpenCV", "PyTorch", "Computer Vision", "Real-time Object Detection"],
-    link: "#",
     images: [
-      "/project/ai-recognition-1.jpg",
-      "/project/ai-recognition-2.jpg",
-      "/project/ai-recognition-3.jpg"
+      "/project/project8/waste.png",
+      "/project/project8/waste3.png",
+      "/project/project8/waste2.png"
     ],
     documentation: "/documentation/makalah AI.docx.pdf",
-    coverImage: "/project/project8/cover.png"
+    coverImage: "/project/project8/cover1.png"
   },
   {
     id: 9,
@@ -205,11 +214,11 @@ export const projects = [
     description: "An end-to-end NLP web platform built with Next.js and Flask, utilizing SVM and LSTM models to automatically classify text, PDF, and audio news",
     longDescription: "The system offers a flexible, dual-model classification approach. For high-efficiency inference, I implemented a traditional machine learning pipeline using TF-IDF feature extraction combined with a linear Support Vector Machine (SVM), which achieved a strong overall accuracy of 84.32%. For deeper semantic and contextual analysis, I engineered a deep learning pipeline utilizing a Long Short-Term Memory (LSTM) neural network.",
     techStack: ["Next", "Flask", "Linear SVM", "LSTM", "NLTK", "spaCy"],
-    link: "https://github.com/nopall-png/classification-NPL",
+    github: "https://github.com/nopall-png/classification-NPL",
     images: [
-      "/project/ai-recognition-1.jpg",
-      "/project/ai-recognition-2.jpg",
-      "/project/ai-recognition-3.jpg"
+      "/project/project9/nlp1.mp4",
+      "/project/project9/nlp2.png",
+      "/project/project9/nlp3.png"
     ],
     documentation: "/documentation/NLP Journal.docx",
     coverImage: "/project/project9/cover.png"
@@ -220,11 +229,11 @@ export const projects = [
     description: "An all-in-one, AI-powered image processing suite featuring seamless resizing, cropping, intelligent background removal, and creative image transformation.",
     longDescription: "Design Everything is a comprehensive, web-based image manipulation platform built to empower users with both standard editing tools and advanced artificial intelligence capabilities. The goal of the project was to create a centralized workspace where users can handle everyday image processing tasks alongside high-end AI transformations without needing complex desktop software.",
     techStack: ["Next.js", "Tailwind CSS", "Python", "Generative AI AP"],
-    link: "https://github.com/nopall-png/DesignEverything",
+    github: "https://github.com/nopall-png/DesignEverything",
     images: [
-      "/project/ai-recognition-1.jpg",
-      "/project/ai-recognition-2.jpg",
-      "/project/ai-recognition-3.jpg"
+      "/project/project10/design.mp4",
+      "/project/project10/design1.png",
+      "/project/project10/design2.png"
     ],
     documentation: "/documentation/imageprocessing.pdf",
     coverImage: "/project/project10/cover.png"

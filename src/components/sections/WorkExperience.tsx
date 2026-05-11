@@ -29,7 +29,7 @@ export default function WorkExperience() {
         <div className="flex flex-col justify-start items-start gap-12 w-full lg:max-w-[896px]">
 
           <h2 className="text-white text-4xl lg:text-5xl font-extrabold leading-tight lg:leading-[72px]">
-            Organization & Work Experiences
+            Work & Organization Experiences
           </h2>
 
           <div className="flex flex-col w-full">
@@ -82,8 +82,8 @@ export default function WorkExperience() {
                         {/* Image Section */}
                         <div className="w-full md:w-72 h-40 md:h-48 bg-zinc-900 rounded-2xl overflow-hidden border border-white/5 shadow-lg flex-shrink-0 relative group/img">
                           {exp.image ? (
-                            <Image 
-                              src={exp.image} 
+                            <Image
+                              src={exp.image}
                               alt={exp.company}
                               fill
                               sizes="(max-width: 768px) 100vw, 288px"

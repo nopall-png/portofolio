@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { personalData } from "@/data";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,23 +35,53 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Nav Links */}
+        {/* Nav Links & Social Icons */}
         <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
+          <div className="flex items-center gap-8 border-r border-white/10 pr-8 mr-2">
+            {navLinks.map((link) => (
+              <a 
+                key={link.name}
+                href={link.href}
+                className="group relative h-6 flex flex-col justify-center items-center overflow-hidden"
+              >
+                <span className="text-neutral-400 text-sm font-medium font-['Inter'] capitalize leading-6 group-hover:text-white transition-colors">
+                  {link.name}
+                </span>
+                <div className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300"></div>
+              </a>
+            ))}
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-4">
             <a 
-              key={link.name}
-              href={link.href}
-              className="group relative h-6 flex flex-col justify-center items-center overflow-hidden"
+              href={personalData.socialLinks.linkedin} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-neutral-400 hover:text-white transition-colors"
+              aria-label="LinkedIn"
             >
-              <span className="text-neutral-400 text-sm font-medium font-['Inter'] capitalize leading-6 group-hover:text-white transition-colors">
-                {link.name}
-              </span>
-              <div className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300"></div>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
             </a>
-          ))}
+            <a 
+              href={personalData.socialLinks.github} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-neutral-400 hover:text-white transition-colors"
+              aria-label="GitHub"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3.5 1.5a10.8 10.8 0 0 0-5.5 0C7.5 2 6.5 2 6.5 2c-.28 1.15-.28 2.35 0 3.5a4.6 4.6 0 0 0-1 3.5c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+              </svg>
+            </a>
+          </div>
         </div>
 
-        {/* Mobile Menu Button (Optional, but good for UX) */}
+        {/* Mobile Menu Button */}
         <div className="lg:hidden">
           <button className="text-white p-2">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
