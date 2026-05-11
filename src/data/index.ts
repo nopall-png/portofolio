@@ -133,12 +133,12 @@ export const projects = [
     techStack: ["Flutter", "Dart", "Appwrite", "Figma"],
     link: "https://meetandfight.vercel.app/",
     images: [
-      "/project/ai-recognition-1.jpg",
-      "/project/ai-recognition-2.jpg",
-      "/project/ai-recognition-3.jpg"
+      "/project/project4/might1.png",
+      "/project/project4/might2.png",
+      "/project/project4/might4.png"
     ],
     documentation: "/documentation/MEET.pdf",
-    coverImage: "/project/project4/cover.png"
+    coverImage: "/project/project4/might.png"
   },
   {
     id: 5,
@@ -148,9 +148,9 @@ export const projects = [
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Figma", "LLM Integration"],
     link: "https://e-learning-softeng-project.vercel.app/",
     images: [
-      "/project/ai-recognition-1.jpg",
-      "/project/ai-recognition-2.jpg",
-      "/project/ai-recognition-3.jpg"
+      "/project/project5/level1.mp4",
+      "/project/project5/level2.png",
+      "/project/project5/level3.png"
     ],
     documentation: "/documentation/software engineering.pdf",
     coverImage: "/project/project5/cover.png"
@@ -177,11 +177,11 @@ export const projects = [
     techStack: ["Next.js", "Typescript", "pyhton", "figma",],
     link: "https://github.com/nopall-png/Roadmap-ai",
     images: [
-      "/project/ai-recognition-1.jpg",
-      "/project/ai-recognition-2.jpg",
-      "/project/ai-recognition-3.jpg"
+      "/project/project7/roadmap1.mp4",
+      "/project/project7/roadmap2.png",
+      "/project/project7/roadmap3.png"
     ],
-    documentation: "/documentation/ReportProjectAI  .pdf",
+    documentation: "/documentation/ReportProjectAI.pdf",
     coverImage: "/project/project7/cover.png"
   },
   {

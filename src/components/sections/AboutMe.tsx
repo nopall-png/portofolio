@@ -5,18 +5,18 @@ export default function AboutMe() {
   return (
     <section id="about" className="py-24 border-t border-white/10">
       <div className="container mx-auto px-6 lg:px-12 flex flex-col items-start max-w-[1360px]">
-        
+
         <div className="flex flex-col justify-start items-start gap-12 w-full lg:max-w-[896px]">
           {/* Title */}
           <h2 className="text-white text-4xl lg:text-5xl font-extrabold leading-tight lg:leading-[72px]">
             About Me
           </h2>
-          
+
           {/* Description */}
           <p className="text-neutral-400 text-base lg:text-lg font-normal leading-relaxed lg:leading-7">
             {aboutMe.text}
           </p>
-          
+
           {/* Stats */}
           <div className="flex flex-wrap items-center gap-8 lg:gap-16 w-full">
             <div className="flex flex-wrap justify-start items-start gap-8 lg:gap-12">
@@ -33,20 +33,20 @@ export default function AboutMe() {
             </div>
 
             {/* Download CV Button */}
-            <a 
-              href="/cv.pdf" 
+            <a
+              href="/documentation/resume_naufal.pdf"
               download
               className="flex items-center gap-3 bg-white text-black px-8 py-3 rounded-full font-bold text-sm lg:text-base hover:bg-neutral-200 transition-colors group mt-4 lg:mt-0"
             >
               Download CV
-              <svg 
-                width="20" 
-                height="20" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2.5" 
-                strokeLinecap="round" 
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
                 strokeLinejoin="round"
                 className="group-hover:translate-y-0.5 transition-transform"
               >
