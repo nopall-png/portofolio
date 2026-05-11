@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { projects } from "@/data";
 import ProjectModal, { Project } from "@/components/sections/ProjectModal";
 
@@ -29,10 +30,20 @@ export default function Projects() {
                   onClick={() => setSelectedProject(project)}
                   className="group flex flex-col justify-start items-start hover:opacity-90 transition-opacity cursor-pointer"
                 >
-                  <div className="w-full aspect-[3/2] bg-gradient-to-br from-zinc-800 via-neutral-800 to-stone-950 rounded-2xl flex justify-center items-center overflow-hidden mb-6">
-                    <span className="text-stone-500 text-sm font-normal leading-5 group-hover:scale-105 transition-transform duration-500">
-                      Project Mockup
-                    </span>
+                  <div className="w-full aspect-[3/2] bg-zinc-900 rounded-2xl flex justify-center items-center overflow-hidden mb-6 relative group shadow-xl">
+                    {project.coverImage ? (
+                      <Image 
+                        src={project.coverImage}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                    ) : (
+                      <span className="text-stone-500 text-sm font-normal leading-5 group-hover:scale-105 transition-transform duration-500">
+                        Project Mockup
+                      </span>
+                    )}
                   </div>
 
                   <h3 className="text-white text-lg font-bold leading-7 mb-1 group-hover:text-neutral-300 transition-colors">

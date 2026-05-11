@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { workExperience } from "@/data";
 
 export default function WorkExperience() {
@@ -78,11 +79,21 @@ export default function WorkExperience() {
                           {exp.description}
                         </p>
 
-                        {/* Image Placeholder */}
-                        <div className="w-full md:w-72 h-40 md:h-48 bg-gradient-to-br from-zinc-800 via-zinc-800 to-neutral-900 rounded-2xl flex items-center justify-center border border-white/5 shadow-lg flex-shrink-0">
-                          <span className="text-stone-500 text-sm font-normal font-['Inter'] leading-5">
-                            Project UI
-                          </span>
+                        {/* Image Section */}
+                        <div className="w-full md:w-72 h-40 md:h-48 bg-zinc-900 rounded-2xl overflow-hidden border border-white/5 shadow-lg flex-shrink-0 relative group/img">
+                          {exp.image ? (
+                            <Image 
+                              src={exp.image} 
+                              alt={exp.company}
+                              fill
+                              sizes="(max-width: 768px) 100vw, 288px"
+                              className="object-cover transition-all duration-500"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-800 to-neutral-900">
+                              <span className="text-stone-500 text-sm font-normal">No Image</span>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>

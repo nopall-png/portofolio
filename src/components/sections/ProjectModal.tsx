@@ -10,6 +10,8 @@ export interface Project {
     techStack: string[];
     link: string;
     images?: string[];
+    documentation?: string;
+    coverImage?: string;
 }
 
 interface ProjectModalProps {
@@ -94,12 +96,23 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                     <div className="w-full aspect-video bg-zinc-900 rounded-2xl outline outline-1 outline-white/10 flex justify-center items-center relative overflow-hidden mb-8 lg:mb-16 group">
 
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src={projectImages[currentImageIndex]}
-                            alt={`${project.title} screenshot ${currentImageIndex + 1}`}
-                            className="w-full h-full object-cover transition-opacity duration-300"
-                        />
+                        {projectImages[currentImageIndex].toLowerCase().endsWith(".mp4") ? (
+                            <video
+                                src={projectImages[currentImageIndex]}
+                                controls
+                                className="w-full h-full object-cover"
+                                autoPlay
+                                muted
+                                loop
+                            />
+                        ) : (
+                            /* eslint-disable-next-line @next/next/no-img-element */
+                            <img
+                                src={projectImages[currentImageIndex]}
+                                alt={`${project.title} screenshot ${currentImageIndex + 1}`}
+                                className="w-full h-full object-cover transition-opacity duration-300"
+                            />
+                        )}
 
                         {totalImages > 1 && (
                             <>
@@ -133,17 +146,32 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                         </div>
                     )}
 
-                    <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full max-w-sm h-14 bg-white hover:bg-gray-200 rounded-full flex justify-center items-center gap-2 transition-colors mt-auto flex-shrink-0"
-                    >
-                        <span className="text-black text-base font-bold font-['Inter']">View Project</span>
-                        <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                    </a>
+                    <div className="w-full max-w-sm flex flex-col gap-3 mt-auto">
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full h-14 bg-white hover:bg-gray-200 rounded-full flex justify-center items-center gap-2 transition-colors flex-shrink-0"
+                        >
+                            <span className="text-black text-base font-bold font-['Inter']">View Project</span>
+                            <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+
+                        {project.documentation && (
+                            <a
+                                href={project.documentation}
+                                download
+                                className="w-full h-14 bg-transparent hover:bg-white/5 rounded-full outline outline-1 outline-white/20 flex justify-center items-center gap-2 transition-colors flex-shrink-0"
+                            >
+                                <span className="text-white text-base font-bold font-['Inter']">Download Documentation</span>
+                                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M7 10l5 5m0 0l5-5m-5 5V3" />
+                                </svg>
+                            </a>
+                        )}
+                    </div>
                 </div>
 
             </div>

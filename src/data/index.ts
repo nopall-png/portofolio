@@ -3,6 +3,7 @@ export const personalData = {
   title: "AI Enthusiast | Machine Learning & Deep Learning",
   description: "Dedicated to mastering the complexities of Artificial Intelligence. I focus on designing and implementing Machine Learning and Deep Learning models, with a strong emphasis on Computer Vision to solve real-world visual recognition challenges.",
   email: "naufalrizki519@gmail.com",
+  profileImage: "/images/profile.jpg",
 };
 
 export const aboutMe = {
@@ -21,6 +22,7 @@ export const workExperience = [
     company: "Diskominfo Santik Kabupaten Bekasi",
     duration: "May 2025 - Aug 2025",
     description: "Completed a Web Developer internship at Diskomintik Cikarang, where I managed the end-to-end development of two functional web projects. I took ownership of the entire lifecycle, from conceptualizing the UI/UX designs to architecting the backend systems using the Django framework. By aligning technical execution with supervisor requirements, I successfully delivered robust, user-centric solutions that balanced efficient database management with intuitive visual interfaces.",
+    image: "/workexperience/kominfo.png",
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ export const workExperience = [
     company: "Latuea Permata Indonesia",
     duration: "Aug 2025 - Nov 2025",
     description: "Acted as a Full-stack Web Developer for a property service platform, overseeing the end-to-end lifecycle from UI/UX design in Figma to final deployment. I engineered a dual-sided system, consisting of a comprehensive admin dashboard for streamlined management and a responsive user interface for clients, all powered by PHP and SQL. My focus was on bridging the gap between complex database logic and an intuitive user journey to enhance service accessibility.",
+    image: "/workexperience/latuea.png",
   },
   {
     id: 3,
@@ -35,6 +38,7 @@ export const workExperience = [
     company: "Nolta Surya Trans",
     duration: "Dec 2025 - Present.",
     description: "Spearheaded the end-to-end design and development of a professional company profile website for Nolta Surya Trans, a logistics firm. I utilized Figma to create a high-fidelity UI/UX design that reflects the company's brand identity and reliability. The final product was architected using Next.js and Tailwind CSS, focusing on high performance, optimized SEO, and a fully responsive layout to enhance the company's digital presence and accessibility.",
+    image: "/workexperience/nolta.png",
   },
   {
     id: 4,
@@ -42,6 +46,7 @@ export const workExperience = [
     company: "yayasan yuan bhakti",
     duration: "Jan 2026 - March 2026",
     description: "Spearheaded the architectural migration of a legacy HTML-based platform to a modern Next.js framework, significantly enhancing site performance, scalability, and developer efficiency. I successfully implemented comprehensive technical SEO strategies, leveraging Server-Side Rendering (SSR) and optimized metadata management to boost organic search visibility and ensure a high-performance, seamless user experience",
+    image: "/workexperience/yayasanism.png",
   },
   {
     id: 5,
@@ -49,6 +54,7 @@ export const workExperience = [
     company: "President University Major Association",
     duration: "Jan 2025 - Jul 2025",
     description: "Acted as the lead Project Manager for a corporate visit to CTI Group, overseeing the coordination of 80 attendees. I directed the full project scope, from initial strategic planning to final on-site execution. By managing a dedicated team and maintaining a precise timeline, I ensured that all project objectives were met, facilitating a meaningful professional exchange between the participants and CTI Group’s industry experts..",
+    image: "/workexperience/pm.png",
   },
   {
     id: 6,
@@ -56,6 +62,7 @@ export const workExperience = [
     company: "President University Major Association",
     duration: "Oct 2024 - Dec 2024",
     description: "Served as the Vice Project Manager for a high-profile guest lecture featuring an industry practitioner from PT Gunung Raja Paksi Tbk. I played a pivotal role in orchestrating the event's logistics and coordinating directly with the speaker to ensure the session's objectives were met. By meticulously managing the project timeline and providing strategic support to the committee, I ensured a seamless execution, facilitating a high-value knowledge exchange between the industry and the academic community",
+    image: "/workexperience/vpm.png",
   },
   {
     id: 7,
@@ -63,6 +70,7 @@ export const workExperience = [
     company: "President University Major Association",
     duration: "Oct 2024 - Feb 2025",
     description: "Served as the Master of Ceremonies for a professional alumni homecoming event, facilitating insightful sharing sessions where distinguished alumni were invited back as keynote speakers. I was responsible for orchestrating the event flow, engaging a diverse audience, and ensuring seamless transitions between sessions, ultimately fostering a meaningful bridge between the alumni’s industry expertise and the current academic community",
+    image: "/workexperience/mc.png",
   },
   {
     id: 8,
@@ -70,6 +78,7 @@ export const workExperience = [
     company: "President University Major Association",
     duration: "Oct 2025 - March 2025",
     description: "Served as an Event Organizer for ICON, a strategic cross-institutional collaborative event between the President University Student Association and an external student organization. I was responsible for coordinating logistical operations and facilitating synergy between both associations, ensuring the seamless execution of a high-impact partnership that fostered networking and knowledge exchange between campuses.",
+    image: "/workexperience/icon.png",
   },
 ];
 
@@ -82,10 +91,11 @@ export const projects = [
     techStack: ["php", "react", "MySQL", "Figma"],
     link: "https://www.latuealand.com/",
     images: [
-      "/projects/ai-recognition-1.jpg",
-      "/projects/ai-recognition-2.jpg",
-      "/projects/ai-recognition-3.jpg"
-    ]
+      "/project/project1/latua1.mp4",
+      "/project/project1/latua2.png",
+      "/project/project1/latua3.png",
+    ],
+    coverImage: "/project/project1/latua.png"
   },
   {
     id: 2,
@@ -95,107 +105,129 @@ export const projects = [
     techStack: ["Next.js", "Tailwind CSS", "TypeScript", "Figma"],
     link: "https://noltalogistic.com/",
     images: [
-      "/projects/ai-recognition-1.jpg",
-      "/projects/ai-recognition-2.jpg",
-      "/projects/ai-recognition-3.jpg"
-    ]
+      "/project/project2/nolta.mp4",
+      "/project/project2/nolta2.png",
+      "/project/project2/nolta3.png",
+    ],
+    coverImage: "/project/project2/nolta1.png"
   },
   {
     id: 3,
     title: "Yayasan Yuan Bhakti - Website Redesign",
     description: "Modernized Yayasan Yuan Bhakti's digital presence by migrating from legacy HTML to a fast, SEO-optimized Next.js platform.",
     longDescription: "The Yayasan Yuan Bhakti project involved a complete digital transformation of the foundation's official website. The primary objective was to modernize their outdated static HTML site into a highly performant, scalable, and discoverable web platform to better serve their community and expand their online reach.",
-    techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
-    link: "#",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    link: "https://yayasanyuanabhakti.vercel.app/",
     images: [
-      "/projects/ai-recognition-1.jpg",
-      "/projects/ai-recognition-2.jpg",
-      "/projects/ai-recognition-3.jpg"
-    ]
+      "/project/project3/yayasan.mp4",
+      "/project/project3/yayasan2.png",
+      "/project/project3/yayasan3.png"
+    ],
+    coverImage: "/project/project3/yayasan.png"
   },
   {
     id: 4,
-    title: "ML Model Dashboard",
-    description: "Interactive dashboard for monitoring machine learning model performance and data drift detection.",
-    techStack: ["Python", "React", "D3.js", "FastAPI"],
-    link: "#",
+    title: "Meet and Fight - Mobile Application",
+    description: "A mobile matchmaking app built with Dart, designed to connect combat sports enthusiasts and martial artists for local sparring sessions.",
+    longDescription: "Meet and Fight is an innovative mobile matchmaking application tailored specifically for the combat sports community. Acting as a digital bridge for athletes, the app provides a seamless, location-based platform to discover and connect with local sparring partners, boxers, and martial artists based on weight class, discipline, and skill level.",
+    techStack: ["Flutter", "Dart", "Appwrite", "Figma"],
+    link: "https://meetandfight.vercel.app/",
+    images: [
+      "/project/ai-recognition-1.jpg",
+      "/project/ai-recognition-2.jpg",
+      "/project/ai-recognition-3.jpg"
+    ],
+    documentation: "/documentation/MEET.pdf",
+    coverImage: "/project/project4/cover.png"
   },
   {
     id: 5,
-    title: "Smart City IoT Platform",
-    description: "IoT data visualization platform processing real-time sensor data from urban infrastructure.",
-    techStack: ["Node.js", "React", "MongoDB", "MQTT"],
-    link: "#",
+    title: "Level up! - E-Learning Platform",
+    description: "An intelligent e-learning platform featuring AI-driven personalized feedback. Built with Next.js.",
+    longDescription: "Level Up is an AI-powered e-learning ecosystem designed to transform the traditional online learning experience into a personalized mentorship journey. Beyond just delivering content, the platform acts as an intelligent tutor that understands student performance and provides actionable insights.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Figma", "LLM Integration"],
+    link: "https://e-learning-softeng-project.vercel.app/",
+    images: [
+      "/project/ai-recognition-1.jpg",
+      "/project/ai-recognition-2.jpg",
+      "/project/ai-recognition-3.jpg"
+    ],
+    documentation: "/documentation/software engineering.pdf",
+    coverImage: "/project/project5/cover.png"
   },
   {
     id: 6,
-    title: "AR Furniture Visualizer",
-    description: "Augmented reality mobile app allowing users to preview furniture in their space before purchase.",
-    techStack: ["React Native", "ARKit", "Three.js", "Firebase"],
-    link: "#",
+    title: "Smart Sorting Conveyer - IoT & CV",
+    description: "VisionSort is an automated, intelligent industrial sorting system that bridges the gap between Artificial Intelligence and physical hardware. The project was designed to streamline logistics and packaging workflows by dynamically routing moving objects based on visual cues, entirely eliminating the need for manual sorting.",
+    techStack: ["Python", "OpenCV", "YOLO", "Roboflow", "Arduino", "IoT Protocols"],
+    link: "https://github.com/KuroBapak/Robot-Sorting-Conveyor",
+    images: [
+      "/project/ai-recognition-1.jpg",
+      "/project/ai-recognition-2.jpg",
+      "/project/ai-recognition-3.jpg"
+    ],
+    documentation: "/documentation/Group1_JACOST.pdf",
+    coverImage: "/project/project6/cover.png"
   },
   {
     id: 7,
-    title: "ML Model Dashboard",
+    title: "Roadmap-AI",
     description: "Interactive dashboard for monitoring machine learning model performance and data drift detection.",
-    techStack: ["Python", "React", "D3.js", "FastAPI"],
-    link: "#",
+    longDescription: "Roadmap AI is an intelligent e-learning ecosystem designed to transform the traditional online learning experience into a personalized mentorship journey. Beyond just delivering content, the platform acts as an intelligent tutor that understands student performance and provides actionable insights.",
+    techStack: ["Next.js", "Typescript", "pyhton", "figma",],
+    link: "https://github.com/nopall-png/Roadmap-ai",
+    images: [
+      "/project/ai-recognition-1.jpg",
+      "/project/ai-recognition-2.jpg",
+      "/project/ai-recognition-3.jpg"
+    ],
+    documentation: "/documentation/ReportProjectAI  .pdf",
+    coverImage: "/project/project7/cover.png"
   },
   {
     id: 8,
-    title: "Smart City IoT Platform",
-    description: "IoT data visualization platform processing real-time sensor data from urban infrastructure.",
-    techStack: ["Node.js", "React", "MongoDB", "MQTT"],
+    title: "Waste Management System - ",
+    description: "An intelligent waste management system utilizing YOLOv8 for real-time garbage detection and automated classification to streamline recycling processes.",
+    longDescription: "SmartSort AI is an advanced waste management solution designed to automate and optimize the garbage sorting process. The project addresses the global challenge of inefficient recycling by introducing an intelligent system capable of identifying and classifying different types of waste in real-time as they move along a conveyor belt or are scanned.",
+    techStack: ["Python", "YOLOv8", "Roboflow", "OpenCV", "PyTorch", "Computer Vision", "Real-time Object Detection"],
     link: "#",
+    images: [
+      "/project/ai-recognition-1.jpg",
+      "/project/ai-recognition-2.jpg",
+      "/project/ai-recognition-3.jpg"
+    ],
+    documentation: "/documentation/makalah AI.docx.pdf",
+    coverImage: "/project/project8/cover.png"
   },
   {
     id: 9,
-    title: "AR Furniture Visualizer",
-    description: "Augmented reality mobile app allowing users to preview furniture in their space before purchase.",
-    techStack: ["React Native", "ARKit", "Three.js", "Firebase"],
-    link: "#",
+    title: "Text Classification - NLP",
+    description: "An end-to-end NLP web platform built with Next.js and Flask, utilizing SVM and LSTM models to automatically classify text, PDF, and audio news",
+    longDescription: "The system offers a flexible, dual-model classification approach. For high-efficiency inference, I implemented a traditional machine learning pipeline using TF-IDF feature extraction combined with a linear Support Vector Machine (SVM), which achieved a strong overall accuracy of 84.32%. For deeper semantic and contextual analysis, I engineered a deep learning pipeline utilizing a Long Short-Term Memory (LSTM) neural network.",
+    techStack: ["Next", "Flask", "Linear SVM", "LSTM", "NLTK", "spaCy"],
+    link: "https://github.com/nopall-png/classification-NPL",
+    images: [
+      "/project/ai-recognition-1.jpg",
+      "/project/ai-recognition-2.jpg",
+      "/project/ai-recognition-3.jpg"
+    ],
+    documentation: "/documentation/NLP Journal.docx",
+    coverImage: "/project/project9/cover.png"
   },
   {
     id: 10,
-    title: "Robotic Arm Kinematics Simulator",
-    description: "A web-based 3D simulation tool for calculating inverse kinematics and visualizing degrees of freedom for robotic arms.",
-    techStack: ["Next.js", "Three.js", "Python", "ROS"],
-    link: "#",
-  },
-  {
-    id: 11,
-    title: "Elementary Learning Portal",
-    description: "Interactive learning platform for elementary students featuring an adaptive IQ test module and general exam system.",
-    techStack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],
-    link: "#",
-  },
-  {
-    id: 12,
-    title: "Elementary Learning Portal",
-    description: "Interactive learning platform for elementary students featuring an adaptive IQ test module and general exam system.",
-    techStack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],
-    link: "#",
-  },
-  {
-    id: 13,
-    title: "Elementary Learning Portal",
-    description: "Interactive learning platform for elementary students featuring an adaptive IQ test module and general exam system.",
-    techStack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],
-    link: "#",
-  },
-  {
-    id: 14,
-    title: "Elementary Learning Portal",
-    description: "Interactive learning platform for elementary students featuring an adaptive IQ test module and general exam system.",
-    techStack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],
-    link: "#",
-  },
-  {
-    id: 15,
-    title: "Elementary Learning Portal",
-    description: "Interactive learning platform for elementary students featuring an adaptive IQ test module and general exam system.",
-    techStack: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],
-    link: "#",
+    title: "Desing Anything - Image Procesing & AI Integration",
+    description: "An all-in-one, AI-powered image processing suite featuring seamless resizing, cropping, intelligent background removal, and creative image transformation.",
+    longDescription: "Design Everything is a comprehensive, web-based image manipulation platform built to empower users with both standard editing tools and advanced artificial intelligence capabilities. The goal of the project was to create a centralized workspace where users can handle everyday image processing tasks alongside high-end AI transformations without needing complex desktop software.",
+    techStack: ["Next.js", "Tailwind CSS", "Python", "Generative AI AP"],
+    link: "https://github.com/nopall-png/DesignEverything",
+    images: [
+      "/project/ai-recognition-1.jpg",
+      "/project/ai-recognition-2.jpg",
+      "/project/ai-recognition-3.jpg"
+    ],
+    documentation: "/documentation/imageprocessing.pdf",
+    coverImage: "/project/project10/cover.png"
   },
 ];
 
@@ -224,7 +256,7 @@ export const techStack = [
       { name: "Figma", icon: "figma" },
       { name: "Git", icon: "git" },
       { name: "Photoshop", icon: "adobephotoshop" },
-      { name: "VS Code", icon: "visualstudiocode" }
+      { name: "Colab", icon: "googlecolab" }
     ]
   }
 ];
@@ -232,13 +264,13 @@ export const techStack = [
 export const services = [
   {
     id: "01",
-    title: "Web Development",
-    description: "Building responsive, performant web applications with modern frameworks and best practices. From concept to deployment, I create scalable solutions tailored to your needs."
+    title: "AI Integration",
+    description: "Implementing machine learning models and computer vision solutions into production systems. Transform your data into actionable insights with cutting-edge AI technology."
   },
   {
     id: "02",
-    title: "AI Integration",
-    description: "Implementing machine learning models and computer vision solutions into production systems. Transform your data into actionable insights with cutting-edge AI technology."
+    title: "Web Development",
+    description: "Building responsive, performant web applications with modern frameworks and best practices. From concept to deployment, I create scalable solutions tailored to your needs."
   },
   {
     id: "03",
