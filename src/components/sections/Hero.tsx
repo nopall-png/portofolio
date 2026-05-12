@@ -1,39 +1,80 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { personalData } from "@/data";
+import { motion } from "framer-motion";
 
 export default function Hero() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier for smooth feel
+      },
+    },
+  };
+
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 pb-10">
+    <section className="min-h-screen flex items-center justify-center pt-20 pb-10 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-0 lg:h-80 relative max-w-[1360px]">
 
         {/* Left Content */}
-        <div className="flex flex-col items-start w-full lg:w-[608px] lg:self-stretch justify-start relative lg:top-[37.80px]">
-          <h1 className="text-white text-5xl lg:text-6xl font-extrabold font-['Inter'] leading-tight lg:leading-[70.40px]">
+        <motion.div 
+          className="flex flex-col items-start w-full lg:w-[608px] lg:self-stretch justify-start relative lg:top-[37.80px]"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.h1 
+            className="text-white text-5xl lg:text-6xl font-extrabold font-['Inter'] leading-tight lg:leading-[70.40px]"
+            variants={itemVariants}
+          >
             Hi, I&apos;m {personalData.name}
-          </h1>
+          </motion.h1>
 
-          <h2 className="text-neutral-400 text-2xl lg:text-3xl font-light font-['Inter'] leading-snug lg:leading-[48px] mt-6 lg:mt-[21px]">
+          <motion.h2 
+            className="text-neutral-400 text-2xl lg:text-3xl font-light font-['Inter'] leading-snug lg:leading-[48px] mt-6 lg:mt-[21px]"
+            variants={itemVariants}
+          >
             {personalData.title}
-          </h2>
+          </motion.h2>
 
-          <p className="text-neutral-400 text-base font-normal font-['Inter'] leading-6 mt-6 lg:mt-[25px] max-w-[512px]">
+          <motion.p 
+            className="text-neutral-400 text-base font-normal font-['Inter'] leading-6 mt-6 lg:mt-[25px] max-w-[512px]"
+            variants={itemVariants}
+          >
             {personalData.description}
-          </p>
+          </motion.p>
 
           {/* Social Links */}
-          <div className="flex items-center gap-6 mt-8">
+          <motion.div className="flex items-center gap-6 mt-8" variants={itemVariants}>
             {[
               { name: "LinkedIn", href: personalData.socialLinks.linkedin },
               { name: "Instagram", href: personalData.socialLinks.instagram },
               { name: "GitHub", href: personalData.socialLinks.github },
             ].map((social) => (
-              <a
+              <motion.a
                 key={social.name}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 hover:border-white/30 transition-all group"
+                whileHover={{ scale: 1.1, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
+                whileTap={{ scale: 0.95 }}
+                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center transition-all group"
                 aria-label={social.name}
               >
                 <svg 
@@ -65,13 +106,18 @@ export default function Hero() {
                     </>
                   )}
                 </svg>
-              </a>
+              </motion.a>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Right Content */}
-        <div className="flex justify-center lg:justify-end items-center w-full lg:w-[608px] lg:h-80 lg:translate-y-10">
+        <motion.div 
+          className="flex justify-center lg:justify-end items-center w-full lg:w-[608px] lg:h-80 lg:translate-y-10"
+          initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
+        >
           <div className="w-64 h-64 lg:w-80 lg:h-80 bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl relative group border border-white/5">
             <Image
               src={personalData.profileImage}
@@ -82,7 +128,7 @@ export default function Hero() {
               priority
             />
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

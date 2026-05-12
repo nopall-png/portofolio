@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -41,10 +42,19 @@ export default function Contact() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   if (status === "success") {
     return (
       <section id="contact" className="py-24 border-t border-white/10">
-        <div className="container mx-auto px-6 lg:px-12 flex flex-col items-center justify-center text-center gap-8 max-w-[1360px] min-h-[400px]">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="container mx-auto px-6 lg:px-12 flex flex-col items-center justify-center text-center gap-8 max-w-[1360px] min-h-[400px]"
+        >
           <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="20 6 9 17 4 12"></polyline>
@@ -60,42 +70,88 @@ export default function Contact() {
           >
             Send another message
           </button>
-        </div>
+        </motion.div>
       </section>
     );
   }
 
   return (
-    <section id="contact" className="py-24 border-t border-white/10">
+    <section id="contact" className="py-24 border-t border-white/10 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row justify-between gap-16 max-w-[1360px]">
 
         {/* Left Side: Text and Decorative Elements */}
-        <div className="w-full lg:w-[608px] flex flex-col justify-start relative min-h-[400px]">
+        <motion.div 
+          className="w-full lg:w-[608px] flex flex-col justify-start relative min-h-[400px]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.2 } }
+          }}
+        >
           <div className="mb-12">
-            <h2 className="text-white text-5xl lg:text-6xl font-extrabold leading-tight lg:leading-[80px]">
+            <motion.h2 
+              variants={fadeIn}
+              className="text-white text-5xl lg:text-6xl font-extrabold leading-tight lg:leading-[80px]"
+            >
               Let&apos;s bring your <br /> ideas to life.
-            </h2>
-            <p className="text-neutral-400 text-lg lg:text-xl font-normal leading-relaxed lg:leading-8 mt-8 max-w-[512px]">
+            </motion.h2>
+            <motion.p 
+              variants={fadeIn}
+              className="text-neutral-400 text-lg lg:text-xl font-normal leading-relaxed lg:leading-8 mt-8 max-w-[512px]"
+            >
               Got a project in mind? Whether it&apos;s AI integration, web development, or design—let&apos;s create something exceptional together.
-            </p>
+            </motion.p>
           </div>
 
           {/* Decorative Floating Squares */}
           <div className="relative w-64 h-64 mt-12 opacity-20 hidden md:block">
-            <div className="absolute w-64 h-64 left-[67px] top-[-60px] rotate-[24deg] rounded-3xl border border-white/30"></div>
-            <div className="absolute w-48 h-48 left-[12px] top-[40px] -rotate-12 rounded-2xl border border-white/20"></div>
-            <div className="absolute w-32 h-32 left-[83px] top-[30px] rotate-[15deg] rounded-2xl border border-white/10"></div>
+            <motion.div 
+              animate={{ 
+                y: [0, -20, 0],
+                rotate: [24, 28, 24]
+              }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute w-64 h-64 left-[67px] top-[-60px] rotate-[24deg] rounded-3xl border border-white/30"
+            ></motion.div>
+            <motion.div 
+              animate={{ 
+                y: [0, 15, 0],
+                rotate: [-12, -8, -12]
+              }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+              className="absolute w-48 h-48 left-[12px] top-[40px] -rotate-12 rounded-2xl border border-white/20"
+            ></motion.div>
+            <motion.div 
+              animate={{ 
+                scale: [1, 1.1, 1],
+                rotate: [15, 10, 15]
+              }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute w-32 h-32 left-[83px] top-[30px] rotate-[15deg] rounded-2xl border border-white/10"
+            ></motion.div>
           </div>
 
           {/* Small Cross/Plus Decorative Element */}
-          <div className="absolute right-[-24px] top-[268px] w-12 h-12 opacity-30 hidden lg:block">
+          <motion.div 
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="absolute right-[-24px] top-[268px] w-12 h-12 opacity-30 hidden lg:block"
+          >
             <div className="absolute w-7 h-[4px] left-[10px] top-[24px] bg-white/30"></div>
             <div className="absolute w-[4px] h-7 left-[24px] top-[10px] bg-white/30"></div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Right Side: Contact Form */}
-        <form onSubmit={handleSubmit} className="w-full lg:w-[608px] flex flex-col justify-start gap-10 pt-4 lg:pt-[74px]">
+        <motion.form 
+          onSubmit={handleSubmit} 
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="w-full lg:w-[608px] flex flex-col justify-start gap-10 pt-4 lg:pt-[74px]"
+        >
           <div className="group border-b border-white/20 pb-4 transition-colors focus-within:border-white">
             <input
               type="text"
@@ -133,9 +189,11 @@ export default function Contact() {
           </div>
 
           <div className="flex flex-col justify-start gap-4">
-            <button
+            <motion.button
               type="submit"
               disabled={status === "loading"}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               className={`flex items-center gap-3 bg-white text-black px-10 py-4 rounded-full font-bold text-base hover:bg-neutral-200 transition-colors group ${status === "loading" ? "opacity-50 cursor-not-allowed" : ""}`}
             >
               {status === "loading" ? "Sending..." : "Send Message"}
@@ -144,12 +202,12 @@ export default function Contact() {
                   <path d="M5 10H15M15 10L11 6M15 10L11 14" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               )}
-            </button>
+            </motion.button>
             {status === "error" && (
               <p className="text-red-500 text-sm">Something went wrong. Please try again.</p>
             )}
           </div>
-        </form>
+        </motion.form>
       </div>
     </section>
   );

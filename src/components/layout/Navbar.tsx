@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { personalData } from "@/data";
 
 export default function Navbar() {
@@ -30,8 +31,15 @@ export default function Navbar() {
         
         {/* Logo */}
         <div className="flex items-center">
-          <a href="#" className="text-white text-xl font-extrabold font-['Inter'] leading-7 tracking-tighter">
-            NR
+          <a href="#" className="flex items-center group">
+            <div className="relative w-10 h-10 rounded-full overflow-hidden border border-white/20 group-hover:border-white/40 transition-all duration-300">
+              <Image 
+                src={personalData.profileImage} 
+                alt={personalData.name}
+                fill
+                className="object-cover"
+              />
+            </div>
           </a>
         </div>
 

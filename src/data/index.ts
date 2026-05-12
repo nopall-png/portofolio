@@ -296,22 +296,26 @@ export const services = [
 export const certificates = [
   {
     id: 1,
-    title: "Deep Learning Specialization",
-    issuer: "Coursera - DeepLearning.AI"
+    title: "Semifinalis YED UI 2025",
+    issuer: "YED UI Business Case 2025",
+    image: "/certificates/YED.jpg"
   },
   {
     id: 2,
-    title: "Advanced React & Next.js",
-    issuer: "Frontend Masters"
+    title: "Data Science Club Olympiad 2025",
+    issuer: "The Great Data Heist",
+    image: "/certificates/DSC.png"
   },
   {
     id: 3,
-    title: "Machine Learning Engineer",
-    issuer: "Google Cloud"
+    title: "Machine Learning : Art of the possible",
+    issuer: "AWS training and certification",
+    image: "/certificates/aws1.png"
   },
   {
     id: 4,
-    title: "Professional UI/UX Design",
-    issuer: "Interaction Design Foundation"
+    title: "Amazon EMR",
+    issuer: "AWS training and certification",
+    image: "/certificates/aws2.png"
   }
 ];
