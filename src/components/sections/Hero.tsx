@@ -2,10 +2,10 @@
 import React from "react";
 import Image from "next/image";
 import { personalData } from "@/data";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function Hero() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,14 +16,14 @@ export default function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier for smooth feel
+        ease: [0.16, 1, 0.3, 1] as const, // Custom cubic-bezier for smooth feel
       },
     },
   };
@@ -116,7 +116,7 @@ export default function Hero() {
           className="flex justify-center lg:justify-end items-center w-full lg:w-[608px] lg:h-80 lg:translate-y-10"
           initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as const, delay: 0.5 }}
         >
           <div className="w-64 h-64 lg:w-80 lg:h-80 bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl relative group border border-white/5">
             <Image
