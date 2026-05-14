@@ -62,9 +62,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 lg:top-6 lg:right-6 z-[80] w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 outline outline-1 outline-white/20 flex justify-center items-center transition-colors shadow-lg"
+                    className="absolute top-6 right-6 lg:top-8 lg:right-8 z-[80] w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 outline outline-1 outline-white/20 flex justify-center items-center transition-colors shadow-lg"
                     aria-label="Close"
                 >
+
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
