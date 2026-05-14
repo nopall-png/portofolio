@@ -39,13 +39,14 @@ export default function CertificateModal({ certificate, onClose }: CertificateMo
                 {/* Close Button */}
                 <button
                     onClick={onClose}
-                    className="absolute -top-12 right-0 text-white/70 hover:text-white flex items-center gap-2 transition-colors group z-10"
+                    className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 outline outline-1 outline-white/20 flex justify-center items-center transition-colors"
+                    aria-label="Close"
                 >
-                    <span className="text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">Close</span>
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
+
 
                 {/* Image/PDF Container */}
                 <div className="rounded-xl overflow-hidden outline outline-1 outline-white/10 shadow-2xl bg-zinc-900/50 flex items-center justify-center max-w-[95vw] max-h-[80vh] w-full">

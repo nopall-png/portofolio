@@ -56,13 +56,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 sm:p-6" onClick={onClose}>
 
             <div
-                className="relative w-full max-w-[1152px] h-auto lg:h-[653px] bg-neutral-950 rounded-3xl outline outline-1 outline-white/10 overflow-hidden flex flex-col lg:flex-row shadow-2xl"
+                className="relative w-full max-w-[1152px] h-full max-h-[90vh] lg:h-[653px] bg-neutral-950 rounded-3xl outline outline-1 outline-white/10 overflow-hidden flex flex-col lg:flex-row shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
             >
 
                 <button
                     onClick={onClose}
-                    className="absolute top-6 right-6 z-10 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 outline outline-1 outline-white/20 flex justify-center items-center transition-colors"
+                    className="absolute top-4 right-4 lg:top-6 lg:right-6 z-[70] w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 outline outline-1 outline-white/20 flex justify-center items-center transition-colors"
+                    aria-label="Close"
                 >
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -70,8 +71,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </button>
 
                 {/* Kolom Kiri: Informasi Project */}
-                {/* PERBAIKAN DI SINI: Menambahkan class untuk hide scrollbar tapi tetap bisa di-scroll */}
-                <div className="w-full lg:w-1/2 h-full p-8 lg:p-12 flex flex-col overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                <div className="w-full lg:w-1/2 h-full p-6 lg:p-12 flex flex-col overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+
                     <h2 className="text-neutral-50 text-3xl lg:text-4xl font-extrabold font-['Inter'] leading-tight mb-6">
                         {project.title}
                     </h2>
@@ -188,7 +189,15 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                                 </svg>
                             </a>
                         )}
+
+                        <button
+                            onClick={onClose}
+                            className="w-full h-14 bg-transparent hover:bg-white/5 rounded-full flex justify-center items-center gap-2 transition-colors lg:hidden mt-2 border border-white/10"
+                        >
+                            <span className="text-neutral-400 text-base font-medium font-['Inter']">Close</span>
+                        </button>
                     </div>
+
                 </div>
 
             </div>

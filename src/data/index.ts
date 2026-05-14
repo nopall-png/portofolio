@@ -106,7 +106,7 @@ export const projects = [
   {
     id: 2,
     title: "Nolta Surya Trans - Company Profile Website",
-    description: "A modern and responsive company profile website developed for Nolat to showcase their comprehensive logistics and freight forwarding services.",
+    description: "A modern and responsive company profile website developed for Nolta to showcase their comprehensive logistics and freight forwarding services.",
     longDescription: "Designed and developed a professional company profile landing page for Nolta Surya Trans, a logistics company. The goal of this project was to establish a strong online presence and clearly communicate their core services, such as freight forwarding, warehousing, and last-mile delivery, to potential B2B clients.\n\nThe website features a clean, corporate UI design tailored for the logistics industry, emphasizing reliability and speed. Built with modern web technologies, it ensures fast loading times, seamless responsiveness across all devices, and an intuitive user experience to drive client inquiries.",
     techStack: ["Next.js", "Tailwind CSS", "TypeScript", "Figma"],
     link: "https://noltalogistic.com/",
@@ -304,7 +304,7 @@ export const certificates = [
     id: 2,
     title: "Data Science Club Olympiad 2025",
     issuer: "The Great Data Heist",
-    image: "/certificates/DSC.png"
+    image: "/certificates/Dsc.png"
   },
   {
     id: 3,
